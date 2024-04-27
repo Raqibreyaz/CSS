@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object-fit and object-position in CSS </title>
+    <style>
+        .container {
+            background-color: azure;
+            height: 80vh;
+            width: 50vw;
+            border: 2px solid black;
+        }
+
+        img{
+            width: 400px;
+            height: 300px;
+            object-fit: cover;
+
+            /* saves the side of the image whivh you want to be safe  */
+            object-position: bottom right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="forest.png" alt="">
+    </div>
+</body>
+
+</html>

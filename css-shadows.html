@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows in CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            border: 2px solid violet;
+            padding: 35px;
+            margin: 10px;
+            box-shadow:5px 5px 5px  ;
+        }
+        .text-element{
+            text-shadow: 5px 5px 10px red;
+            padding: 35px;
+            margin: 10px;
+
+            /* outline is not counted as the part of the content */
+            outline: 2px solid blue;
+
+            /* offset gives space in between content and outline */
+            outline-offset: 2px;
+
+            border: 2px solid black;
+
+            /* make the border curvy */
+            border-radius: 20px;
+            /* by making the border curvy u can see that the outline also follows border and becomes curvy while separately we cant make only the outline curvy */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        i am a box
+    </div>
+    <div>
+        <p class="text-element">
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, numquam. Alias excepturi tempore iusto dicta, voluptates voluptatum maxime commodi qui accusamus est eligendi voluptatem voluptate quibusdam blanditiis nulla placeat labore eius deleniti! Optio nemo illum ex repellat placeat quibusdam beatae necessitatibus animi, velit maiores blanditiis cupiditate, aliquid, autem voluptates reiciendis rem totam voluptate ut alias officiis! Nobis quidem vel sint quia ad perspiciatis sed voluptas numquam ea. Cumque, iste totam nesciunt est laudantium, nam quibusdam in eaque corrupti sint eos et dolorum quod soluta aspernatur molestias, tenetur modi incidunt autem. Quam praesentium alias qui molestias quas aliquam nisi esse modi ea, libero aut, reiciendis optio inventore quisquam animi doloribus delectus excepturi, quod maxime eius reprehenderit asperiores. Quaerat, natus assumenda officia facilis inventore libero soluta dolor nisi saepe! Debitis, sed pariatur? Harum error ipsum, ducimus laudantium tenetur voluptatibus tempore atque eligendi excepturi optio expedita fugiat placeat fuga quam delectus voluptas quas magnam? Vitae inventore commodi non doloremque mollitia aperiam hic odit suscipit minima molestias asperiores, impedit maiores eum, quis laborum deleniti nemo? Sed odit magni labore ea temporibus iure dolore. Ipsam quis illo officiis dolorum natus iusto tenetur dolores ipsa beatae eius sunt enim consequuntur fugit, aut non provident? Iusto ea cupiditate maiores, tempore eligendi rem eos fugit sunt quibusdam sed repellendus ipsum, est aperiam laudantium blanditiis. Error facere consectetur eligendi libero, repudiandae officiis assumenda dolorem necessitatibus ipsum unde! Praesentium fuga esse neque explicabo dolore et.
+        </p>
+    </div>
+</body>
+
+</html>

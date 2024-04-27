@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations in CSS</title>
+    <style>
+        .container {
+            background-color: purple;
+            height: 50vh;
+            width: 60vw;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+           
+
+        }
+
+        .box1 {
+
+            height: 25%;
+            width: 15%;
+            align-self: auto;
+
+            /* adding the declared animation */
+            animation: myAnimation1,myAnimation2;
+
+            /* the durartion in which the animtion will be performed */
+            animation-duration: 3s;
+            /* how many times the animtion will be performed */
+            animation-iteration-count: infinite;
+            
+            /* the graph of working of animation */
+            animation-timing-function: ease-in-out;
+
+
+            /* the direction of animation */
+            animation-direction: alternate;
+
+            /* to stop the animation */
+            /* animation-play-state: paused; */
+        }
+
+        .box2 {
+
+            height: 25%;
+            width: 15%;
+
+            
+            /* animation: myAnimation2;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate; */
+
+animation:myAnimation2  3s ease-in-out 0s infinite alternate ;
+        }
+
+        @keyframes myAnimation1 {
+            from {
+                background-color: rgb(174, 255, 0);
+
+            }
+
+            to {
+                background-color: blueviolet;
+                transform: translateX(40vw);
+
+
+            }
+        }
+
+        /* animation at every state */
+        @keyframes myAnimation2 {
+            0%{
+background-color: aqua;
+
+            }
+            20%{
+background-color: bisque;
+transform: rotateX(20deg);
+            }
+            50%{
+                background-color: yellow;
+transform: rotateX(40deg);
+            }
+            100%{
+                background-color: violet;
+                    transform: translateY(100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">
+
+        </div>
+        <div class="box2"></div>
+    </div>
+
+</body>
+
+</html>

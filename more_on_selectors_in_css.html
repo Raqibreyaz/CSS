@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>more selectors in css</title>
+    <style>
+        /* .box:first-child{
+            color: blue;
+        } */
+        /* will make the first line red
+        .boxes::first-line{
+            background-color: red;
+        } */
+
+        /* .boxes{ 
+             will make all content blue 
+            color: blue;
+            will give violet border
+            border: 2px solid violet;
+     } */
+
+        .boxes *{ 
+
+             /* will give every box inside boxes the border red  */
+            border: 2px solid red;
+            color: blue;
+        }
+.box,[data-color="mycolor"]{
+    padding-top: 50px;
+}
+
+/* nth box  child will be red colored  */
+ /* .box:nth-child(2){
+    color: red;
+ }
+ .box:nth-last-child(1){
+    color: blue;
+ } */
+
+/* pseudo elements */
+
+ /* adds content before the first content of the element */
+.boxes::before{
+    content:" this is my element which is putted first";
+    color: bisque;
+}
+
+/* modify the first letter of the box */
+.box::first-letter{
+    font-size: 50px;
+    color: violet;
+}
+
+/* adds content after the last content of the element  */
+.boxes::after{
+    content:" this is my element which is putted last";
+    color: peru;
+}
+
+/* targetting the placeholder attribute of the input tag */
+input::placeholder{
+color: brown;
+font-style: italic  ;
+}
+ </style>
+</head>
+<body>
+    <div class="boxes">
+    <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum atque iusto quia.</div>
+    <div class="box">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos iusto qui culpa!</div>
+    <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam soluta provident perspiciatis.</div>
+    <input type="text" placeholder="type your name here">
+    <div class="box" data-color="mycolor">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam soluta provident perspiciatis.</div>
+</div>
+</body>
+</html>

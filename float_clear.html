@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float and Clear</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+img{
+    /* makes the element to float on the left side */
+    float: left;
+}
+.divid{
+    /* when a floating element is present on thwe left side then this element will come on next line */
+    clear: left;
+}
+
+    </style>
+</head>
+<body>
+    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum ipsum aliquam incidunt! Sed veniam sapiente nostrum ipsum saepe amet velit, illo iusto dolores.</div>
+    <div>
+        <img src="java.jpg" alt="this is java" width="135px">
+    </div>
+    <div class="divid">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quod, rem sapiente voluptates ea voluptatum voluptatem recusandae aspernatur qui nemo sequi, error in placeat delectus dignissimos facilis! Veritatis doloremque molestias ullam velit.</div>
+    <div class="divid">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ullam labore tempora eveniet illum placeat, animi numquam eligendi similique laudantium, dolor corporis? Expedita.</div>
+</body>
+</html>

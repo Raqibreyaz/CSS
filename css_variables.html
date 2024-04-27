@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables in CSS</title>
+    <style>
+        /* variables in css are exactly same as variables in programming languages , here variables can be assignes any property , color , value; */
+       /* every variable in root block is a global variable */
+        :root{
+            /* a background color variable */
+            --color:purple;
+
+            /* a secondary color variable */
+            --seccolor:pink;
+
+            /* a border variable */
+            --brdr:2px solid rgb(0, 149, 255);
+
+            /* font size variable */
+            --fsize:20px;
+
+            /* font weight variable */
+            --fweight:0px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            
+        }
+        div>span:first-child{
+            /* changing value of color for current block */
+            --color:violet;
+
+            /* declaring a local variable */
+            --myclr:red;
+                                                                                                                                             
+            /* when --color variable is not found then violet color will be used */
+            background-color: var(--myclr);
+        }
+        div>span {
+            border: var(--brdr);
+            background-color: var(--color);
+            display: inline-block;
+            font-size: var(--fsize);
+            font-weight: var(--fweight);
+            text-transform: capitalize;
+           margin: 10px;
+            padding: 20px;
+            width: 35px;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div>
+        this is a div
+    </div>
+    <div>
+        <span>
+            span1
+        </span>
+        <span>
+            span2
+        </span>
+        <span>
+            span3
+        </span>
+        <span>
+            span4
+        </span>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sizing units in css</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* the default size of every font will be */
+        html{
+            font-size: 19px;
+        }
+        .box{
+
+            background-color: blueviolet;
+            color: white;
+            border: 2px solid blue;
+            font-size: 15px;
+            height: 50px;
+            width: 50px;
+        }
+        .container{
+
+            /* rem is the sising unit which has the size of the default font size
+               since the default font sdize is 12px */
+            font-size: 0.5rem;
+            background-color: BLUE;
+            box-sizing: border-box;
+            /* auto attribute puts the block element in centre */
+            margin: 23px auto;
+
+            color: white;
+            border: 2px solid black;
+            /* view port width 50 % of view port width*/
+            width: 80vw;
+            /* view port height 25 % of view port height*/
+            height: 88vh;
+        }
+        /* where p is the child of container */
+.container > div{
+
+    /* em represnts the inherited font size and the coefficient represents the 
+       multiplier */
+    font-size:1.5em;
+    background-color: violet;
+    border: 2px solid black;
+    /* % will only be applied when it has a parent */
+    height: 50%;
+    width: 50%;
+}
+
+.container > div > div{
+
+    background-color: red;
+   
+    color: brown;
+    border: 2px solid maroon;
+    height: 50%;
+    width: 50%;
+}
+
+.mycont{
+    background-color: red;
+    color: yellow;
+    margin: 23px auto;
+    box-sizing: border-box;
+    /* vmin is the minimum of the hight and width of the viewport */
+    width: 80vmin;
+     /* vmax is the maximum of the hight and width of the viewport */
+   height: 80vmax;
+}
+
+.content{
+    border: 2px solid black;
+ box-sizing: border-box;
+ /* width: 100vmin; */
+ width: 80vw;
+ margin: 23px auto;
+ background-color: aqua;
+
+ /* each time the min height will be 40% of the view port height */
+ min-height: 40vh;
+}
+    </style>
+</head>
+<body>
+    <div class = "box">
+        this is a box
+    </div>
+
+    <div class="container">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque est possimus sed tempora laborum temporibus, soluta dolorum, pariatur assumenda accusamus minima eveniet iusto! Officiis exercitationem nobis, laboriosam illo laudantium reiciendis debitis? Beatae!
+    <!-- here div is child tag of div -->
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis quam consectetur ipsa illo voluptatum nobis suscipit aliquam? Doloribus provident sequi soluta cumque impedit.
+        <div>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur quidem cupiditate nihil nisi saepe esse quis provident. Soluta doloribus fugiat beatae eos commodi?
+        </div>
+    </div>
+    </div>
+    <div class="mycont">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam non fugit et, in odit necessitatibus aliquam. Iste, excepturi nostrum voluptas sit voluptate asperiores.
+    </div>
+    <div class="content">
+       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt incidunt tenetur quam maiores nemo voluptatem esse ut. Ut repellat sequi impedit voluptatem quas recusandae, nobis perspiciatis ducimus molestias possimus similique vero sapiente, numquam quia corrupti minima quasi molestiae id vitae. Obcaecati itaque facilis ad. Consequatur corrupti earum deleniti animi totam? Illum neque vel ea eos aliquid, at corrupti repellat suscipit nemo quam, architecto vero praesentium error quasi? Perspiciatis natus dolorum adipisci officiis aspernatur optio vitae, accusamus tempore reprehenderit deleniti expedita eius illo ipsa fugit laboriosam veniam ullam sit voluptates doloremque? Illum, aspernatur, impedit officia, nam laboriosam tenetur perspiciatis hic fugiat necessitatibus odio consectetur distinctio. Dicta placeat corrupti minima dignissimos magni excepturi commodi exercitationem iure dolor quis facere non provident impedit quia, tenetur blanditiis dolores eveniet optio magnam tempora nihil similique, a, ut et. Debitis enim ex necessitatibus perspiciatis numquam nisi maxime! Nostrum libero aut expedita facere enim voluptas hic minus veritatis. Officia, eos magnam id veniam recusandae esse quaerat sequi assumenda vero consectetur possimus voluptate doloremque natus sit obcaecati voluptatibus maxime quas numquam itaque ratione ut ullam? Provident, tempore corporis veritatis nostrum neque maxime nobis rerum sit quam hic quas assumenda vitae doloribus odio, aliquam molestias corrupti perferendis ut? Cum laboriosam ratione delectus eaque autem ipsum aliquid vel dolor iste sapiente esse possimus ipsa neque beatae voluptate, alias doloremque quis omnis commodi! Atque quos magni ex harum, libero ipsam tempora? Totam, reprehenderit non.
+    </div>
+</body>
+</html>

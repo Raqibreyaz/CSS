@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+</head>
+<style>
+
+    /* element selector */
+div{
+    /* color: red;
+    background-color : blueviolet; */
+}
+
+/* class selector */
+.blueviolet{
+    background-color: blueviolet ; 
+    color : red ;
+}
+
+/* id selector */
+#maroon{
+    background-color: maroon;
+    color: bisque;
+}
+
+/* child selector
+                    where p is a direct child of div */
+div > p{
+    background-color: violet;
+}
+
+/* descendent selector 
+                        where p is a descendent of div */
+
+div p{
+
+    background-color: yellow;
+}
+
+/* universal selector */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* pseudo selector */
+
+/* on visiting a link the link then will turn green */
+a:visited {
+    color : green;
+}
+
+/* link will be  red*/
+a:link{
+    color: red;
+}
+
+/* on hovering on a link it will look in blue */
+a:hover{
+    color:blue;
+}
+
+/* every first p child will be aqua color */
+p:first-child{
+    color: aqua;
+}
+
+</style>
+<body>
+    <div class = "blueviolet">
+        Using Element selector
+    </div>
+
+    <div id = "maroon">
+        using id selector
+    </div>
+
+    <div>
+        <p>
+          using child selector and descnedent selector
+        </p>
+    </div>
+
+    <div>
+        <section>
+            <p>
+                this p is a descendent of div
+            </p>
+        </section>
+    </div>
+    <a href="https://www.google.com">Go To Google</a>
+    <a href="https://www.facebook.com">Go to facebook</a>
+    <div id = "maroon">i am maroon div</div>
+</body>
+</html>

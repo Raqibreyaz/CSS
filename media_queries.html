@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media queries in css</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+}
+        body{
+            background-color: aqua;
+        }
+
+    /*basic syntax
+               @media not|only mediatype and (expressions){
+
+        } */
+        @media only screen and (max-width:455px) {
+            
+            body{
+                background-color: red;
+            }
+            .boxes{
+                flex-direction: column;
+            }
+        }
+        .boxes{
+            display: flex;
+        }
+        .boxes>.box{
+            margin: 2px;
+            padding: 25px;
+            background-color: black;
+            width: 100px;
+           
+        }
+    </style>
+</head>
+<body>
+    this is the body of the page
+    <div class="boxes">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+</body>
+</html>

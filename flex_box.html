@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex box in css</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            
+            border: 2px solid blue;
+
+            display: flex;
+
+height: 80vh;
+
+             /* defines direction of the items */
+           /* flex-direction: row;
+            */
+           /* adjust items according to the flex direction */
+           /* justify-content: center; */ 
+
+           /* adjust items of a single line according to perpendicular of flex direction */
+           /* align-items:center; */
+
+          /* when the items overflows then makes the items to next line */
+          /* flex-wrap: wrap; */
+
+          /*adjust items of multiples lines according to perpendicular flex direction */
+          /* align-content: center; */
+
+          /* flex-flow: direction wrap|nowrap; used to set the direction of flex and the wrap at once*/
+          flex-flow: row wrap;
+
+          /* gap: row-wise col-wise; */
+          /* gap: 100px 100px; */
+        }
+               .item{
+border:2px solid black;
+height: 40px;
+width: 40px;
+/* margin: 10px; */
+background-color: violet;
+
+/* flex grow = 1 tells that every element on the same line will take equal space  */
+flex-grow: 1;
+        }
+
+        /* order property defines the order in which the item will appear , 
+        by default every item has order 0  */
+.order1{
+    order: 1;
+}
+.order2{
+    order: 2;
+}
+.order3{
+    order: 3;
+}
+.order4{
+    order: 4;
+}
+.container>.item1{
+    /* on a single item it takes 2 space and will lie on the same line */
+    flex-grow: 2;
+
+    /* will shrink with double speed */
+    flex-shrink: 2;
+
+    /* aligns a particular element  */
+    align-self: end;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="item item1">1</div>
+      <div class="item ">2</div>
+      <div class="item ">3</div>
+      <div class="item ">4</div>
+      <div class="item "></div>
+      <div class="item"></div>
+      
+       </div>
+</body>
+</html>

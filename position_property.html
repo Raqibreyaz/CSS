@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position property in css</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            border: 2px solid black;
+            margin: 3px;
+            padding: 25px;
+            height: 15vh;
+            width: 40vw;
+        }
+        .parent{
+            border: 3px solid aqua;
+            margin: 20px;
+            padding: 100px;
+            position: absolute;
+            /* top: 100px;
+            bottom: 100px; */
+            height: 80vh;
+            /* box-sizing: border-box; */
+        }
+        .box1{
+            background-color: aqua;
+            /* absolute position makes the element to move 
+            according to its nearest absolute positioned ancestor if no ancestor is positioned absolutely then it will move according to the root element */
+            position: absolute;
+
+            /* the element move from top according to its absolute positioned ancestor */
+            top: 0px;
+             /* the element move from left according to its absolute positioned ancestor */
+            left: 10px;
+        }
+        .box2{
+            background-color: blueviolet;
+
+            /* by default the position is static and we cant move a box from its position so we should give position relative  */
+            position: relative;
+            top: 20px;
+            bottom: 12px;
+            left: 20px;
+
+            /* zindex gives the position from z axis and it can cover other elements */
+            z-index: 1;
+        }
+        .box3{
+            background-color: bisque;
+            left: 30px;
+        }
+        .box4{
+            background-color: aquamarine;
+/* a fixed positioned element will be fixed at its position even on scrolling the page  */
+position: fixed;
+            top: 100px;
+            left: 40px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+</div>
+</body>
+
+</html>

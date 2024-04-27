@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid in css</title>
+    <style>
+        .container{
+                    border: 2px solid black;
+                   height: 100vh;
+                    width: 80vw;
+                    display: grid;
+
+                    /* fr is a fraction unit */
+                    /* here in every line there are 3 columns the second one is 2x more than the two */
+                    /* grid-template-columns: 1fr 2fr 1fr; */
+
+                    /* three columns 1fr */
+                    /* grid-template-columns: repeat(3,1fr); */
+
+                    /* grid-template-columns: repeat(3,minmax(40px,1fr));
+                     */
+                    
+
+                    grid-template-columns: repeat(4,60px);
+                    
+                    row-gap: 10px;
+                    column-gap: 55px;
+                    /* grid-template-rows: repeat(4,40px); */
+
+                    /* adjust items horizontally  within the grid*/ 
+                    justify-items: center; 
+
+                    /* adjust items vertically within the grid*/
+                     align-items: center;
+
+                     /* adjust the whole grid 
+                     justify-content: center;
+
+                     align-content: center;
+
+                    shortcut of justify and align
+                     place-content:center
+                    */
+        }
+        .container>.item{
+            border: 2px solid red;
+            
+            height: 55px;
+            width: 55px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>

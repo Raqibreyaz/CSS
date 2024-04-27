@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix
+    </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .background {
+            height: 100%;
+            width: 100%;
+
+            background-image: url("projects/img/netflix-background.jpg");
+            background-position: center center;
+            background-repeat: none;
+            background-size: max(100vw, 1200px);
+        }
+
+        #main {
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.641);
+         
+        }
+
+        .container {
+            position: relative;
+            top: 30%;
+        }
+
+        .box {
+            color: white;
+            text-align: center;
+        }
+
+        .box1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            font-weight: bolder;
+        }
+
+        .box2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+
+        .nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            height: 12%;
+            width: 70%;
+            position: relative;
+            top: 0px;
+            column-gap: 30px;
+        }
+
+        .list {
+            display: flex;
+            width: 500px;
+            position: absolute;
+            justify-content: end;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .list>.select {
+            width: 120px;
+            height: 30px;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            font-size: large;
+            text-align: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border-radius: 5px;
+            border: 0.000005px solid white;
+        }
+
+        .list>.navbtn {
+
+            height: 30px;
+            width: 80px;
+            background-color: red;
+            color: white;
+            font-size: large;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border-radius: 5px;
+            border: 1px solid black;
+
+        }
+
+        .nav img {
+            width: 150px;
+            position: absolute;
+            left: 27px;
+            top: 20px;
+
+        }
+
+        form {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 7px;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        form>input {
+
+            width: 400px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.791);
+            color: white;
+            border-radius: 5px;
+        }
+
+        form>div {
+            height: 50px;
+            width: 200px;
+            font-size: x-large;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: red;
+            color: white;
+            border-radius: 3px;
+        }
+
+        div>a {
+            text-decoration: none;
+            color: white;
+        }
+
+
+        .separation {
+            height: 10px;
+            width: 100%;
+            background-color: rgb(59, 56, 56);
+        }
+
+
+        section {
+            height: 500px;
+            width: 100%;
+            background-color: black;
+            color: white;
+
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .side1 {
+            text-align: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 20px;
+            padding: 25px;
+        }
+
+        .side2 {
+            position: relative;
+            z-index: 10;
+        }
+
+        .section1 {}
+
+        .section1 .side2 {
+            padding: 48px;
+            position: relative;
+        }
+
+        .section1 img {
+            height: 320px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .section1 .side1 {
+            text-align: start;
+
+        }
+
+        .section1 .side2 video {
+            height: 403px;
+            width: 311px;
+            top: 0px;
+            right: 0px;
+            left: 104px;
+            position: absolute;
+            z-index: 5;
+        }
+
+        section .heading {
+            font-size: 50px;
+            font-weight: bolder;
+
+        }
+
+        section .description {
+            font-size: 25px;
+            font-weight: 400;
+        }
+
+        .section2 {}
+
+        .section2 img {
+            height: 370px;
+            width: 494px;
+        }
+
+        .section2 .side1 {
+            text-align: start;
+            padding: 30px;
+        }
+
+        .section3 img {
+
+            height: 400px;
+            width: 400px;
+        }
+
+        .section3 .side2 video {
+            position: absolute;
+    top: 49px;
+    height: 150px;
+    left: 87px;   
+            
+        }
+
+        .section3 .side2 img {
+            position: relative;
+            z-index: 10;
+        }
+
+        /* @media only screen and (max-width:1000px) {
+            .container {
+                top: 25%;
+            }
+
+            .box {
+                font-size: large;
+            }
+
+            form>input {
+                width: 275px;
+                height: 35px;
+            }
+
+            form>div {
+                height: 35px;
+                width: 150px;
+            }
+
+            .nav img {
+                width: 120px;
+                top: 30px;
+            }
+        }
+
+        @media only screen and (max-width:750px) {
+
+            .box1 {
+                font-size: 40px;
+            }
+
+            .box2 {
+                font-size: 22px;
+            }
+
+            .list {
+                margin-top: 20px;
+            }
+
+            .list>.select {
+                width: 95px;
+            }
+
+            .list>.navbtn {
+                width: 70px;
+            }
+        }
+
+        @media only screen and (max-width:700px) {
+            .background {
+                height: 80vh;
+            }
+
+            .container {
+                top: 20%;
+            }
+
+            .box1 {
+                font-size: 27px;
+            }
+
+            .nav img {
+                width: 80px;
+                top: 25px;
+            }
+        }
+
+        @media only screen and (max-width:550px) {
+            .nav {
+                column-gap: 10px;
+            }
+
+            .list {
+                gap: 10px;
+            }
+
+            .list>.navbtn {
+                font-size: small;
+            }
+
+            .list>.select {
+                font-size: small;
+            }
+
+            form {
+                flex-direction: column;
+            }
+
+            form>div {
+                width: 100px;
+                height: 30px;
+                font-size: medium;
+            }
+        }
+
+        @media screen and (max-width:500px) {
+            .list {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width:360px) {
+
+            .list>.select {
+                font-size: 0px;
+                font-weight: 0px;
+                width: 55px;
+                height: 25px;
+            }
+
+            .list>.navbtn {
+                height: 25px;
+            }
+        }
+
+        @media only screen and (max-width:300px) {
+            .nav {
+                flex-direction: column;
+
+            }
+
+            .list {
+                justify-content: flex-start;
+            }
+
+            .background {
+                height: 90vh;
+            }
+
+            form>input {
+                width: 200px;
+            }
+        }
+
+        @media screen and (max-width:230px) {
+            form>input {
+                width: 125px;
+            }
+
+            .background {
+                height: 100vh;
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="background">
+        <div id="main">
+            <div class="nav">
+                <div class="logo">
+                    <img src="projects/img/.svg/logo.svg" alt="">
+                </div>
+                <div class="list">
+                    <select name="language" id="language" class="select">
+                        <option value="english">
+                            <div>English</div>
+                        </option>
+                    </select>
+                    <button class="navbtn">
+                        sign in
+                    </button>
+                </div>
+            </div>
+            <div class="container">
+                <div class="box">
+                    <div class="box1">
+                        Unlimited movies, TV shows and more
+                    </div>
+                    <div class="box2">
+                        Watch anywhere. Cancel anytime.
+                    </div>
+                    <div>
+                        Ready to watch? Enter your email to create or restart your membership.
+                    </div>
+                </div>
+                <form action="">
+                    <input type="text" placeholder="Email address">
+                    <div>
+                        <a href="/">
+                            get started &gt;
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="separation"></div>
+    <section class="section1 center">
+        <div class="side1">
+            <div class="heading">Enjoy on your TV</div>
+            <div class="description">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players
+                and
+                more.</div>
+        </div>
+        <div class="side2">
+            <img src="projects/img/img2.png" alt="">
+            <video src="projects/video1.mp4" autoplay muted loop>
+            </video>
+        </div>
+    </section>
+
+    <div class="separation"></div>
+
+    <section class="section2 center">
+        <div class="side2">
+            <img src="projects/img/img1.jpg" alt="">
+        </div>
+        <div class="side1">
+            <div class="heading">Download your shows to watch offline</div>
+            <div class="description">Save your favourites easily and always have something to watch.</div>
+        </div>
+    </section>
+    <div class="separation"></div>
+    <section class="section3 center">
+        <div class="side1">
+            <div class="heading">Watch everywhere</div>
+            <div class="description">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</div>
+        </div>
+        <div class="side2">
+            <img src="projects/img/img3.png" alt="">
+            <video src="projects/video2.mp4" autoplay muted loop></video>
+        </div>
+    </section>
+</body>
+
+</html>
